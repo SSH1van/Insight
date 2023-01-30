@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 
-	background: #abb9c6 url("img/background.jpg") fixed no-repeat;
+	background: #abb9c6 url("img/background/background.jpg") fixed no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -210,71 +210,15 @@ h6 {
 	color: #244a61;
 }
 
-
-.btn2 {
-	padding: 18px 24px;
-
-	display: inline-block;
-	vertical-align: top;
-	text-decoration: none;
-
-	color: #244a61;
-	width: 264px;
-	font-size: 18px;
-	font-weight: 300;
-	text-transform: uppercase;
-}
-
-.btn-move {
-	color: #fff;
-	transition: all .5s;
-	position: relative;
-}
-
-.btn-move::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-
-	background-color: rgba(255, 255, 255, .2);
-	transition: all 0.3s;
-}
-
-.btn-move:hover::before {
-	opacity: 0;
-	transform: scale(0.5, 0.5);
-}
-
-.btn-move::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-
-
-	opacity: 0;
-	transition: all .3s;
-	border: 1px solid rgba(255, 255, 255, .5);
-	transform: scale(1.2, 1.2);
-}
-
-.btn-move:hover::after {
-	opacity: 1;
-	transform: scale(1, 1);
-}
-
-
 @media (max-width: 1010px) {
 	.btn:hover {
 		background-color: transparent;
 		color: #fff;
+	}
+
+	.btn:active {
+		background-color: #fff;
+		color: #244a61;
 	}
 }
 
@@ -568,8 +512,13 @@ h6 {
 
 @media (max-width: 1010px) {
 	.member_more:hover {
-		background-color: transparent;
+		background-color: #fff;
 		color: #244a61;
+	}
+
+	.member_more:active {
+		background-color: #244a61;
+		color: #fff;
 	}
 }
 
@@ -676,35 +625,6 @@ h6 {
 	--myColor2: #fff;
 }
 
-/*
-.arrow_items {
-	position: absolute;
-	z-index: 2000;
-	top: 0;
-	left: 0;
-
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-}
-.arrow_item {
-	margin: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: transparent;
-}
-.arrow_icon {
-	display: block;
-
-	height: 80px;
-	width: 80px;
-
-	fill: #fff;
-	transition: all .6s linear;
-}
-*/
 
 /* Services
 ======================*/
@@ -827,6 +747,18 @@ h6 {
 .social_item:hover .social_icon {
 	background-color: #fff;
 	fill: #244a61;
+}
+
+@media (max-width: 1010px) {
+	.social_item:hover .social_icon {
+		background-color: transparent;
+		fill: #fff;
+	}
+
+	.social_item:active .social_icon {
+		background-color: #244a61;
+		color: #fff;
+	}
 }
 
 

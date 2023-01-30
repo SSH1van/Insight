@@ -1,4 +1,4 @@
-css_dir = "."
+ss_dir = "."
 sass_dir = "."
 images_dir = "."
 fonts_dir = "fonts"
