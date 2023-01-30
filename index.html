@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Alice&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@400;600;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+	<title>Инсайт</title>
+</head>
+
+<body>
+
+	<svg style="display: none">
+		<symbol id="vk" viewBox="0 0 20 20">
+			<g>
+				<path d="M17.802 12.298s1.617 1.597 2.017 2.336a.127.127 0 0 1 .018.035c.163.273.203.487.123.645-.135.261-.592.392-.747.403h-2.858c-.199 0-.613-.052-1.117-.4-.385-.269-.768-.712-1.139-1.145-.554-.643-1.033-1.201-1.518-1.201a.548.548 0 0 0-.18.03c-.367.116-.833.639-.833 2.032 0 .436-.344.684-.585.684H9.674c-.446 0-2.768-.156-4.827-2.327C2.324 10.732.058 5.4.036 5.353c-.141-.345.155-.533.475-.533h2.886c.387 0 .513.234.601.444.102.241.48 1.205 1.1 2.288 1.004 1.762 1.621 2.479 2.114 2.479a.527.527 0 0 0 .264-.07c.644-.354.524-2.654.494-3.128 0-.092-.001-1.027-.331-1.479-.236-.324-.638-.45-.881-.496.065-.094.203-.238.38-.323.441-.22 1.238-.252 2.029-.252h.439c.858.012 1.08.067 1.392.146.628.15.64.557.585 1.943-.016.396-.033.842-.033 1.367 0 .112-.005.237-.005.364-.019.711-.044 1.512.458 1.841a.41.41 0 0 0 .217.062c.174 0 .695 0 2.108-2.425.62-1.071 1.1-2.334 1.133-2.429.028-.053.112-.202.214-.262a.479.479 0 0 1 .236-.056h3.395c.37 0 .621.056.67.196.082.227-.016.92-1.566 3.016-.261.349-.49.651-.691.915-1.405 1.844-1.405 1.937.083 3.337z" />
+			</g>
+		</symbol>
+		<symbol id="telegram" viewBox="0 0 512 512">
+			<g>
+				<path d="M470.4354553,45.4225006L16.8273029,221.2490387c-18.253809,8.1874695-24.4278889,24.5854034-4.4127407,33.4840851l116.3710175,37.1726685l281.3674316-174.789505c15.3625488-10.9733887,31.0910339-8.0470886,17.5573425,4.023468L186.0532227,341.074646l-7.5913849,93.0762329c7.0313721,14.3716125,19.9055786,14.4378967,28.1172485,7.2952881l66.8582916-63.5891418l114.5050659,86.1867065c26.5942688,15.8265076,41.0652466,5.6130371,46.7870789-23.3935242L509.835083,83.1804428C517.6329956,47.474514,504.3345032,31.7425518,470.4354553,45.4225006z" />
+			</g>
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 512 512">
+			<g>
+				<path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z" />
+				<path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z" />
+				<path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z" />
+			</g>
+		</symbol>
+		<symbol id="next" viewBox="0 0 791.966 791.967">
+			<g>
+				<path transform='translate(-100, 0) rotate(90 150 160) rotate(90 700 80)' d="M245.454,396.017L617.077,56.579c12.973-12.94,12.973-33.934,0-46.874c-12.973-12.94-34.033-12.94-47.006,0
+				L174.615,370.896c-6.932,6.899-9.87,16.076-9.408,25.087c-0.462,9.045,2.476,18.188,9.408,25.088l395.456,361.19
+				c12.973,12.94,34.033,12.94,47.006,0c12.973-12.939,12.973-33.934,0-46.873L245.454,396.017z" />
+			</g>
+		</symbol>
+		<symbol id="prev" viewBox="0 0 791.966 791.967">
+			<g>
+				<path d="M245.454,396.017L617.077,56.579c12.973-12.94,12.973-33.934,0-46.874c-12.973-12.94-34.033-12.94-47.006,0
+				L174.615,370.896c-6.932,6.899-9.87,16.076-9.408,25.087c-0.462,9.045,2.476,18.188,9.408,25.088l395.456,361.19
+				c12.973,12.94,34.033,12.94,47.006,0c12.973-12.939,12.973-33.934,0-46.873L245.454,396.017z" />
+			</g>
+		</symbol>
+	</svg>
+
+
+	<!-- Dandelions -->
+	<div class="dandelions">
+		<img src="img/dandelions.svg" class="dandelions_svg" alt="">
+	</div>
+
+
+	<!-- Header -->
+	<div class="header_hover" id="headerHover">HoverMe</div>
+	<div class="header" id="header">
+		<div class="container">
+			<div class="header_inner">
+				<a class="header_logo" id="logo" data-scroll="#intro">Инсайт</a>
+				<div class="header_nav">
+					<a class="nav" id="nav1" href="#" data-scroll="#about">О проекте</a>
+					<a class="nav" id="nav2" href="#" data-scroll="#possibility">Возможности</a>
+					<a class="nav" id="nav3" href="#" data-scroll="#members">Специалисты</a>
+					<a class="nav" id="nav4" href="#" data-scroll="#services">Услуги</a>
+				</div>
+			</div> <!-- /.header__inner -->
+		</div> <!-- /.container -->
+	</div> <!-- /.header -->
+
+
+	<!-- Intro -->
+	<div class="container">
+		<div class="intro" id="intro">
+			<div class="intro_inner">
+				Психология - это исследование себя
+			</div>
+			<a class="btn" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Узнать больше</a>
+			<!--<a class="btn2 btn-move" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank"><span>Узнать больше</span></a>-->
+		</div>
+	</div> <!-- /.container -->
+
+
+	<!-- About -->
+	<div class="container" id="about">
+		<div class="about">Наш проект</div>
+		<div class="about_inner">
+
+			<div class="about_element" id="aboutElement1" data-nohover="#aboutElement1">
+				<img class="about_img" src="img/about/A1.jpg" alt="">
+				<div class="about_title">Кто мы?</div>
+				<div class="about_description">
+					<div class="about_text">Психологическая мастерская начала свой путь в 2016 году на базе МГИМО МИД России и из студенческого закрытого клуба за 6 лет стремительно выросла в самостоятельный проект!</div>
+				</div>
+			</div>
+
+			<div class="about_element" id="aboutElement2" data-nohover="#aboutElement2">
+				<img class="about_img" src="img/about/A2.jpg" alt="">
+				<div class="about_title">Зачем мы?</div>
+				<div class="about_description">
+					<div class="about_text">Психологическая мастерская Инсайт создана для повышения психологической культуры личности и помощи специалистам в самореализации.</div>
+				</div>
+			</div>
+
+			<div class="about_element" id="aboutElement3" data-nohover="#aboutElement3">
+				<img class="about_img" src="img/about/A3.jpg" width="100%" alt="">
+				<div class="about_title">Для кого мы?</div>
+				<div class="about_description">
+					<div class="about_text">
+						<p>Этот вопрос мы задаем себе регулярно и, пожалуй, наш ответ: для каждого.</p>
+						<p>Ведь человеку больше всего нужно, чтобы его поняли, услышали и увидели, чтобы дали веру и опору, именно это каждый человек, читающий этот текст, сможет здесь найти!</p>
+						<p>Каждый специалист мастерской опирается в работе на эти три задачи: увидеть, услышать, понять.</p>
+						<p>Простая истина — человеку нужен человек!
+							Поэтому наша мастерская — пространство человеческих отношений!</p>
+					</div>
+				</div>
+
+			</div>
+		</div> <!-- /.about__inner -->
+	</div> <!-- /.container -->
+
+
+	<!-- Possibility -->
+	<div class="container" id="possibility">
+		<div class="possibility">
+			<div class="possibility_title">Зачем вы здесь?</div>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Получить бесплатную консультацию</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Узнать себя</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Записаться к специалисту</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Определиться с выбором профессии</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Принять участие в мероприятии</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Стажировка для начинающих специалистов</a>
+		</div> <!-- /.possibility -->
+	</div> <!-- /.container -->
+
+
+	<!-- Members -->
+	<div class="container" id="members">
+		<div class="members">
+			<div class="members_title">Специалисты</div>
+
+			<div class="members_slider" id="membersSlider">
+				<div class="slick__item">
+					<div class="member" id="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member1.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Варвара Короткова</div>
+							<div class="member_profession">основатель проекта, психоаналитик</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member2.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Марина Павлова</div>
+							<div class="member_profession">руководитель мастерской, психолог-имиджмейкер</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member3.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Ксения Соколова</div>
+							<div class="member_profession">PR-директор, психолог-консультант</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member4.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Анна Мартынова</div>
+							<div class="member_profession">коуч, психолог</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member5.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Антон Зайков</div>
+							<div class="member_profession">психолог</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member6.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Елена Зубарева</div>
+							<div class="member_profession">психолог-педагог</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member7.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Анастасия Фролова</div>
+							<div class="member_profession">НЛП-мастер, психолог-консультант</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member8.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Дарья Ионина</div>
+							<div class="member_profession">психолог-консультант</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+
+				<div class="slick__item">
+					<div class="member">
+						<div class="member_photo">
+							<img class="photo" src="img/members/member9.jpg" alt="">
+						</div>
+						<div class="member_description">
+							<div class="member_name">Алла Лагутина</div>
+							<div class="member_profession">психолог-консультант</div>
+						</div>
+						<a class="member_more" href="#">Подробнее</a>
+					</div>
+				</div>
+			</div> <!-- /.members_slider -->
+
+		</div> <!-- /.members -->
+	</div> <!-- /.container -->
+
+
+	<!-- Services -->
+	<div class="container" id="services">
+		<div class="services">
+			<div class="services_title">Услуги</div>
+
+			<div class="services_items" id="text">
+				<a class="services_text" href="#">Диагностика<br><br><span>Данная услуга включает в себя проведение диагностики, консультацию психолога по полученным результатам, предоставление рекомендаций в письменной форме.<br><br>Стоимость: 3.000 руб</span></a>
+				<a class="services_text" href="#">Проект «Путь к себе»<br><br><span>Проект направлен на исследование себя и состоит из 12 консультаций, разбитых на 4 блока. Запросы для работы в каждом блоке подбираются в индивидуальном подряде для каждого клиента.<br><br>Стоимость: оплата производится за каждый блок отдельно перед началом работы</span></a>
+				<a class="services_text" href="#">Консультация по профориентации<br><br><span>Консультация по профориентации поможет выяснить ваши сильные стороны, увлечения, задатки, творческий потенциал и определиться с будущей профессией.<br><br>Длительность: 120 минут<br>Стоимость: 2.000 руб</span><br></a>
+				<a class="services_text" href="#">Индивидуальная консультация<br><br><span>Личная терапевтическая беседа клиента и специалиста, которая помогает выявить проблемные моменты и наметить тактику преодоления сложных психологических состояний<br><br>Длительность: 50−55 минут<br>Стоимость: зависит от выбранного специалиста</span><br></a>
+				<a class="services_text" href="#">Мастер-класс<br><br><span>Очный формат групповой работы, направленный на развитие навыков в различных сферах (межличностная коммуникация; целеполагание; эмоции и чувства; исследование себя и др.) через активное взаимодействие под руководством психолога-тренера.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span><br></a>
+				<a class="services_text" href="#">Психологический киноклуб<br><br><span>Онлайн-встреча, во время которой участники ведут активную дискуссию и делятся впечатлениями о просмотренном фильм под руководством психолога.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span><br></a>
+			</div>
+		</div> <!-- /.services -->
+	</div> <!-- /.container -->
+
+
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer_inner">
+				<div class="footer_one">
+					<div class="footer_img_href">incight.com</div>
+					<div class="footer_img">
+						<img class="footer_icon" src="img/icon.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="social">
+					<div class="social_title">Познакомиться с нами поближе</div>
+					<div class="social_items">
+						<a class="social_item" href="tg://resolve?domain=psy_insights/" target="_blank">
+							<svg class="social_icon">
+								<use xlink:href="#telegram"></use>
+							</svg>
+						</a>
+
+						<a class="social_item" href="https://vk.com/psy.insights" target="_blank">
+							<svg class="social_icon">
+								<use xlink:href="#vk"></use>
+							</svg>
+						</a>
+
+						<a class="social_item" href="https://instagram.com/psy_insight_mgimo/" target="_blank">
+							<svg class="social_icon">
+								<use xlink:href="#instagram"></use>
+							</svg>
+						</a>
+					</div> <!-- /.social_items -->
+				</div> <!-- /.social -->
+			</div> <!-- /.footer_inner -->
+		</div> <!-- /.container -->
+
+		<div class="copyright">
+			<div class="copyright__text">
+				<div>Copyright © 2023 Инсайт. Все права защищены.</div>
+				<div>Made <span>by Ivan Shishkin</span></div>
+			</div>
+		</div> <!-- /.copyright -->
+	</div> <!-- /.footer -->
+
+
+	<!-- Javascript -->
+	<script src="js/app.js"></script>
+	<script src="js/slick/slick.min.js"></script>
+
+</body>
+
+</html>
