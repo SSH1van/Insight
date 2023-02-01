@@ -16,7 +16,7 @@ $(function () {
 			thisId.toggleClass("show_second");
 			setTimeout(function () {
 				thisId.toggleClass("show_first");
-			}, 300);
+			}, 800);
 		}
 	});
 
@@ -149,6 +149,8 @@ $(function () {
 
 		let elementId = $(this).data("scroll");
 		let elementOffset = $(elementId).offset().top;
+
+		console.log(elementOffset);
 
 		$("html, body").animate({
 			scrollTop: elementOffset
