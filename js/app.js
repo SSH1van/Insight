@@ -1,5 +1,5 @@
 $(function () {
-	/*	Services	*/
+	/*	Services  */
 	$(".services_text").on("click", function (event) {
 		event.preventDefault();
 
@@ -7,7 +7,7 @@ $(function () {
 		var width = thisId.width();
 		var height = thisId.height();
 
-		if (width < 430 || height < 35) {
+		if (width < 200 || height < 35) {
 			thisId.toggleClass("show_first");
 			setTimeout(function () {
 				thisId.toggleClass("show_second");
@@ -110,6 +110,7 @@ $(function () {
 	function checkScroll(scrollPosLast, scrollPos) {
 		if (scrollPos > scrollPosLast) {
 			header.addClass("fixed");
+			headerNav.removeClass("show");
 		} else if (scrollPos < scrollPosLast || scrollPos == 0) {
 			header.removeClass("fixed");
 		}
@@ -144,6 +145,8 @@ $(function () {
 	$("[data-scroll]").on("click", function (event) {
 		event.preventDefault();
 
+		headerNav.removeClass("show");
+
 		let elementId = $(this).data("scroll");
 		let elementOffset = $(elementId).offset().top;
 
@@ -176,5 +179,17 @@ $(function () {
 		let elementThisOffset = $(elementThisId).select();
 
 		elementThisOffset.toggleClass("click");
+	});
+
+	/* Burger menu */
+	let burger = $("#burger");
+	let headerNav = $("#headerNav");
+
+	burger.on("click", function () {
+		headerNav.toggleClass("show");
+	});
+
+	$(window).resize(function () {
+		headerNav.removeClass("show");
 	});
 });
