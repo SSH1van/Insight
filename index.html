@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,12 +58,12 @@
 	<div class="header" id="header">
 		<div class="container">
 			<div class="header_inner">
-				<a class="header_logo" id="logo" data-scroll="#intro">Инсайт</a>
+				<a class="header_logo" id="logo" data-scroll="#intro" data-scroll="#possibility" data-withouthover="#logo">Инсайт</a>
 				<div class="header_nav" id="headerNav">
-					<a class="nav" id="nav1" href="#" data-scroll="#about">О проекте</a>
-					<a class="nav" id="nav2" href="#" data-scroll="#possibility">Возможности</a>
-					<a class="nav" id="nav3" href="#" data-scroll="#members">Специалисты</a>
-					<a class="nav" id="nav4" href="#" data-scroll="#services">Услуги</a>
+					<a class="nav" id="nav1" href="#" data-scroll="#about" data-withouthover="#nav1">О проекте</a>
+					<a class="nav" id="nav2" href="#" data-scroll="#possibility" data-withouthover="#nav2">Возможности</a>
+					<a class="nav" id="nav3" href="#" data-scroll="#members" data-withouthover="#nav3">Специалисты</a>
+					<a class="nav" id="nav4" href="#" data-scroll="#services" data-withouthover="#nav4">Услуги</a>
 				</div>
 				<button class="burger" id="burger">
 					<span class="burger_menu"></span>
@@ -73,23 +74,23 @@
 
 
 	<!-- Intro -->
-	<div class="container">
-		<div class="intro" id="intro">
+	<div class="intro" id="intro">
+		<div class="container">
 			<div class="intro_inner">
 				Психология - это исследование себя
 			</div>
-			<a class="btn" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Узнать больше</a>
+			<a class="btn" href="#" target="_blank" id="btn" data-withouthover="#btn">Психологическая мастерская инсайт</a>
 		</div>
-	</div> <!-- /.container -->
+	</div> <!-- /.intro -->
 
 
 	<!-- About -->
 	<div class="about" id="about">
 		<div class="container">
-			<div class="title">Наш проект</div>
+			<!--			<div class="title">Наш проект</div>-->
 			<div class="about_inner">
 
-				<div class="about_element" id="aboutElement1" data-nohover="#aboutElement1">
+				<div class="about_element" id="aboutElement1" data-nohover="#aboutElement1" data-withouthover="#aboutElement1">
 					<img class="about_img" src="img/about/A1.jpg" alt="">
 					<div class="about_question">Кто мы?</div>
 					<div class="about_description">
@@ -97,7 +98,7 @@
 					</div>
 				</div>
 
-				<div class="about_element" id="aboutElement2" data-nohover="#aboutElement2">
+				<div class="about_element" id="aboutElement2" data-nohover="#aboutElement2" data-withouthover="#aboutElement2">
 					<img class="about_img" src="img/about/A2.jpg" alt="">
 					<div class="about_question">Зачем мы?</div>
 					<div class="about_description">
@@ -105,7 +106,7 @@
 					</div>
 				</div>
 
-				<div class="about_element" id="aboutElement3" data-nohover="#aboutElement3">
+				<div class="about_element" id="aboutElement3" data-nohover="#aboutElement3" data-withouthover="#aboutElement3">
 					<img class="about_img" src="img/about/A3.jpg" width="100%" alt="">
 					<div class="about_question">Для кого мы?</div>
 					<div class="about_description">
@@ -127,12 +128,12 @@
 	<div class="container" id="possibility">
 		<div class="possibility">
 			<div class="title">Зачем вы здесь?</div>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Получить бесплатную консультацию</a>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Узнать себя</a>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Записаться к специалисту</a>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Определиться с выбором профессии</a>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Принять участие в мероприятии</a>
-			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank">Стажировка для начинающих специалистов</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn1" data-withouthover="#btn1">Получить бесплатную консультацию</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn2" data-withouthover="#btn2">Узнать себя</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn3" data-withouthover="#btn3">Записаться к специалисту</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn4" data-withouthover="#btn4">Определиться с выбором профессии</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn5" data-withouthover="#btn5">Принять участие в мероприятии</a>
+			<a class="btn pos" href="https://vk.com/psy.insights?w=wall-46674735_39" target="_blank" id="btn6" data-withouthover="#btn6">Стажировка для начинающих специалистов</a>
 		</div> <!-- /.possibility -->
 	</div> <!-- /.container -->
 
@@ -152,7 +153,7 @@
 							<div class="member_name">Варвара Короткова</div>
 							<div class="member_profession">основатель проекта, психоаналитик</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more1" data-withouthover="#more1">Подробнее</a>
 					</div>
 				</div>
 
@@ -165,7 +166,7 @@
 							<div class="member_name">Марина Павлова</div>
 							<div class="member_profession">руководитель мастерской, психолог-имиджмейкер</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more2" data-withouthover="#more2">Подробнее</a>
 					</div>
 				</div>
 
@@ -178,7 +179,7 @@
 							<div class="member_name">Ксения Соколова</div>
 							<div class="member_profession">PR-директор, психолог-консультант</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more3" data-withouthover="#more3">Подробнее</a>
 					</div>
 				</div>
 
@@ -191,7 +192,7 @@
 							<div class="member_name">Анна Мартынова</div>
 							<div class="member_profession">коуч, психолог</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more4" data-withouthover="#more4">Подробнее</a>
 					</div>
 				</div>
 
@@ -204,7 +205,7 @@
 							<div class="member_name">Антон Зайков</div>
 							<div class="member_profession">психолог</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more5" data-withouthover="#more5">Подробнее</a>
 					</div>
 				</div>
 
@@ -217,7 +218,7 @@
 							<div class="member_name">Елена Зубарева</div>
 							<div class="member_profession">психолог-педагог</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more6" data-withouthover="#more6">Подробнее</a>
 					</div>
 				</div>
 
@@ -230,7 +231,7 @@
 							<div class="member_name">Анастасия Фролова</div>
 							<div class="member_profession">НЛП-мастер, психолог-консультант</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more7" data-withouthover="#more7">Подробнее</a>
 					</div>
 				</div>
 
@@ -243,7 +244,7 @@
 							<div class="member_name">Дарья Ионина</div>
 							<div class="member_profession">психолог-консультант</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more8" data-withouthover="#more8">Подробнее</a>
 					</div>
 				</div>
 
@@ -256,7 +257,7 @@
 							<div class="member_name">Алла Лагутина</div>
 							<div class="member_profession">психолог-консультант</div>
 						</div>
-						<a class="member_more" href="#">Подробнее</a>
+						<a class="member_more" href="#" id="more9" data-withouthover="#more9">Подробнее</a>
 					</div>
 				</div>
 			</div> <!-- /.members_slider -->
@@ -271,12 +272,12 @@
 			<div class="title">Услуги</div>
 
 			<div class="services_items" id="text">
-				<a class="services_text" href="#">Диагностика<br><br><span>Данная услуга включает в себя проведение диагностики, консультацию психолога по полученным результатам, предоставление рекомендаций в письменной форме.<br><br>Стоимость: 3.000 руб</span></a>
-				<a class="services_text" href="#">Проект «Путь к себе»<br><br><span>Проект направлен на исследование себя и состоит из 12 консультаций, разбитых на 4 блока. Запросы для работы в каждом блоке подбираются в индивидуальном подряде для каждого клиента.<br><br>Стоимость: оплата производится за каждый блок отдельно перед началом работы</span></a>
-				<a class="services_text" href="#">Консультация по профориентации<br><br><span>Консультация по профориентации поможет выяснить ваши сильные стороны, увлечения, задатки, творческий потенциал и определиться с будущей профессией.<br><br>Длительность: 120 минут<br>Стоимость: 2.000 руб</span></a>
-				<a class="services_text" href="#">Индивидуальная консультация<br><br><span>Личная терапевтическая беседа клиента и специалиста, которая помогает выявить проблемные моменты и наметить тактику преодоления сложных психологических состояний<br><br>Длительность: 50−55 минут<br>Стоимость: зависит от выбранного специалиста</span></a>
-				<a class="services_text" href="#">Мастер-класс<br><br><span>Очный формат групповой работы, направленный на развитие навыков в различных сферах (межличностная коммуникация; целеполагание; эмоции и чувства; исследование себя и др.) через активное взаимодействие под руководством психолога-тренера.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span></a>
-				<a class="services_text" href="#">Психологический киноклуб<br><br><span>Онлайн-встреча, во время которой участники ведут активную дискуссию и делятся впечатлениями о просмотренном фильм под руководством психолога.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span></a>
+				<a class="services_text" href="#" id="text1" data-withouthover="#text1">Диагностика<br><br><span>Данная услуга включает в себя проведение диагностики, консультацию психолога по полученным результатам, предоставление рекомендаций в письменной форме.<br><br>Стоимость: 3.000 руб</span></a>
+				<a class="services_text" href="#" id="text2" data-withouthover="#text2">Проект «Путь к себе»<br><br><span>Проект направлен на исследование себя и состоит из 12 консультаций, разбитых на 4 блока. Запросы для работы в каждом блоке подбираются в индивидуальном подряде для каждого клиента.<br><br>Стоимость: оплата производится за каждый блок отдельно перед началом работы</span></a>
+				<a class="services_text" href="#" id="text3" data-withouthover="#text3">Консультация по профориентации<br><br><span>Консультация по профориентации поможет выяснить ваши сильные стороны, увлечения, задатки, творческий потенциал и определиться с будущей профессией.<br><br>Длительность: 120 минут<br>Стоимость: 2.000 руб</span></a>
+				<a class="services_text" href="#" id="text4" data-withouthover="#text4">Индивидуальная консультация<br><br><span>Личная терапевтическая беседа клиента и специалиста, которая помогает выявить проблемные моменты и наметить тактику преодоления сложных психологических состояний<br><br>Длительность: 50−55 минут<br>Стоимость: зависит от выбранного специалиста</span></a>
+				<a class="services_text" href="#" id="text5" data-withouthover="#text5">Мастер-класс<br><br><span>Очный формат групповой работы, направленный на развитие навыков в различных сферах (межличностная коммуникация; целеполагание; эмоции и чувства; исследование себя и др.) через активное взаимодействие под руководством психолога-тренера.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span></a>
+				<a class="services_text" href="#" id="text6" data-withouthover="#text6">Психологический киноклуб<br><br><span>Онлайн-встреча, во время которой участники ведут активную дискуссию и делятся впечатлениями о просмотренном фильм под руководством психолога.<br><br>Длительность: 90 мин<br>Стоимость: бесплатно</span></a>
 			</div>
 		</div> <!-- /.services -->
 	</div> <!-- /.container -->
@@ -287,28 +288,28 @@
 		<div class="container">
 			<div class="footer_inner">
 				<div class="footer_one">
-					<div class="footer_img_href">incight.com</div>
 					<div class="footer_img">
 						<img class="footer_icon" src="img/icon.jpg" alt="">
 					</div>
+					<div class="footer_img_href">incight.com</div>
 				</div>
 
 				<div class="social">
 					<div class="social_title">Познакомиться с нами поближе</div>
 					<div class="social_items">
-						<a class="social_item" href="tg://resolve?domain=psy_insights/" target="_blank">
+						<a class="social_item" href="tg://resolve?domain=psy_insights/" target="_blank" id="social1" data-withouthover="#social1">
 							<svg class="social_icon">
 								<use xlink:href="#telegram"></use>
 							</svg>
 						</a>
 
-						<a class="social_item" href="https://vk.com/psy.insights" target="_blank">
+						<a class="social_item" href="https://vk.com/psy.insights" target="_blank" id="social2" data-withouthover="#social2">
 							<svg class="social_icon">
 								<use xlink:href="#vk"></use>
 							</svg>
 						</a>
 
-						<a class="social_item" href="https://instagram.com/psy_insight_mgimo/" target="_blank">
+						<a class="social_item" href="https://instagram.com/psy_insight_mgimo/" target="_blank" id="social3" data-withouthover="#social3">
 							<svg class="social_icon">
 								<use xlink:href="#instagram"></use>
 							</svg>
