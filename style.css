@@ -241,7 +241,7 @@ h6 {
 ======================*/
 .btn {
 	margin-top: 100px;
-	padding: 18px 24px;
+	padding: 18px 0;
 
 	display: inline-block;
 	vertical-align: top;
@@ -396,7 +396,8 @@ h6 {
 	position: absolute;
 	overflow: hidden;
 	transition: transform linear .4s;
-	min-width: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .about_description {
@@ -447,7 +448,7 @@ h6 {
 	width: 900px;
 	text-align: center;
 	margin: 10px 0;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 
@@ -723,6 +724,7 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	color: #fff;
 	width: 50%;
 }
@@ -848,10 +850,6 @@ h6 {
 		height: 100vh;
 	}
 
-	.intro_inner {
-		margin-top: 50px;
-	}
-
 	/* About */
 	.about_element {
 		width: 555px;
@@ -866,11 +864,19 @@ h6 {
 	}
 
 	.about_element:last-child .about_description {
-		font-size: 18px;
+		font-size: 22px;
 	}
 
-	.about_img {
-		height: 400px;
+	.about_element:last-child .about_img {
+		width: auto;
+	}
+
+	.about_text br {
+		display: none;
+	}
+
+	.about_text span {
+		font-size: 0;
 	}
 
 	/* Title */
@@ -906,9 +912,9 @@ h6 {
 	}
 
 	/* Button */
-
 	.btn {
-		padding: 12px 18px;
+		width: 190px;
+		padding: 12px 0;
 		margin-top: 60px;
 		font-size: 14px;
 	}
@@ -1141,11 +1147,11 @@ h6 {
 	}
 
 	.about_description {
-		font-size: 22px;
+		font-size: 20px;
 	}
 
 	.about_element:last-child .about_description {
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	.about_question {
@@ -1228,7 +1234,6 @@ h6 {
 	/* Button */
 	.btn.pos {
 		width: 350px;
-		font-size: 12px;
 		padding: 10px 16px;
 	}
 
@@ -1270,12 +1275,12 @@ h6 {
 		margin-top: 40px;
 		font-size: 12px;
 		padding: 10px 14px;
-		width: 200px;
+		width: 170px;
 	}
 
 	.btn.pos {
 		width: 300px;
-		font-size: 10px;
+		font-size: 12px;
 		margin: 7px 0;
 	}
 
@@ -1293,7 +1298,7 @@ h6 {
 	}
 
 	.about_element:last-child .about_description {
-		font-size: 10px;
+		font-size: 14px;
 	}
 
 	.about_element {
@@ -1417,12 +1422,12 @@ h6 {
 		margin-top: 20px;
 		font-size: 8px;
 		padding: 8px 12px;
-		width: 150px;
+		width: 120px;
 	}
 
 	.btn.pos {
 		width: 240px;
-		font-size: 9px;
+		font-size: 11px;
 	}
 
 	/* About */
@@ -1435,7 +1440,7 @@ h6 {
 	}
 
 	.about_element:last-child .about_description {
-		font-size: 9px;
+		font-size: 12px;
 	}
 
 	/* Members */
@@ -1492,19 +1497,19 @@ h6 {
 }
 
 
-@media (min-width:536px) {
+@media (min-width:537px) {
 	.services_text {
 		transition: max-width linear .3s, background-color linear .3s, border linear .3s, max-height linear .55s;
 	}
 }
 
-@media (min-width:767px) {
+@media (min-width:768px) {
 	.services_text {
 		transition: max-width linear .3s, background-color linear .3s, border linear .3s, max-height linear .5s;
 	}
 }
 
-@media (min-width:1250px) {
+@media (min-width:1251px) {
 	.services_text {
 		transition: max-width linear .16s, background-color linear .2s, border linear .2s, max-height linear .5s;
 	}

@@ -59,6 +59,8 @@ $(function () {
 	let nav3 = $("#nav3");
 	let nav4 = $("#nav4");
 
+
+
 	checkScroll(scrollPosLast, scrollPos);
 	chekScrollPos(scrollPos);
 
@@ -145,16 +147,21 @@ $(function () {
 
 
 	/* Smooth scroll */
-	//	$("[data-scroll]").on("click", function (event) {
-	//		headerNav.removeClass("show");
-	//
-	//		let elementId = $(this).data("scroll");
-	//		let elementOffset = $(elementId).offset().top;
-	//
-	//		$("html, body").animate({
-	//			scrollTop: elementOffset
-	//		}, 700);
-	//	});
+	let elementId;
+	let elementOffset;
+	let mobileNan = true; /* Smooth scroll Intro on mobile device */
+
+	$("[data-scroll]").on("click", function (eventImportant) {
+		headerNav.removeClass("show");
+
+		mobileNan = eventImportant.isPrototypeOf(); /* Smooth scroll Intro on mobile device */
+		elementId = $(this).data("scroll");
+		elementOffset = $(elementId).offset().top;
+
+		$("html, body").animate({
+			scrollTop: elementOffset + 1
+		}, 700);
+	});
 
 
 	/* Members https://kenwheeler.github.io/slick/ */
@@ -176,8 +183,10 @@ $(function () {
 
 	/* Without hover for mobile */
 	/* For block About */
+	let mobile = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+
 	$("[data-nohover]").on("click", function () {
-		if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+		if (mobile) {
 			let elementThisId = $(this).data("nohover");
 			let elementThisOffset = $(elementThisId).select();
 
@@ -186,17 +195,20 @@ $(function () {
 	});
 
 	/* For another */
-	$("[data-withouthover]").on("click", function (event) {
-		if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-			let elementId = $(this).data("withouthover");
-			let elementSelect = $(elementId).select();
+	let navId;
+	let navSelect;
 
-			elementSelect.addClass("noHover");
+	$("[data-withouthover]").on("click", function (event) {
+		if (mobile) {
+			navId = $(this).data("withouthover");
+			navSelect = $(navId).select();
+
+			navSelect.addClass("noHover");
 		}
 	});
 
 	/* For arrow slider's */
-	if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	if (mobile) {
 		let prev = $(".slick-prev");
 		let next = $(".slick-next");
 
@@ -219,40 +231,34 @@ $(function () {
 
 
 	/* Smooth scroll Intro on mobile device */
-	let pos = $(window).scrollTop();
-	let posLast = pos;
-	let control = pos;
-	$(window).scroll(function () {
-		if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-			if (pos == 0 && posLast == 0) {
-				posLast = pos;
-				pos = $(this).scrollTop();
-				control = $(this).scrollTop();
-			} else if (control <  $(this).height()) {
-				control = $(this).scrollTop();
+	let bool1 = true;
+	let bool2 = false;
+
+	$(window).on('scroll', function () {
+		if (scrollPos < scrollPosLast) {
+			mobileNan = true;
+		}
+		if (mobile && mobileNan) {
+			if ($(this).scrollTop() == 0) {
+				bool1 = true;
+			} else if ($(this).scrollTop() < intro.height() + 50 && $(this).scrollTop() > intro.height()) {
+				bool1 = true;
+				bool2 = true;
+			} else if ($(this).scrollTop() <= intro.height() && bool1) {
+				if (!bool2) {
+					$("html, body").animate({
+						scrollTop: (intro.height())
+					}, 700);
+					bool1 = false;
+				}
+				if (bool2) {
+					$("html, body").animate({
+						scrollTop: (0)
+					}, 700);
+					bool2 = false;
+					bool1 = false;
+				}
 			}
-
-			if (pos > posLast && pos > 0) {
-				pos = -1;
-				$("html, body").animate({
-					scrollTop: ($(this).height() - 20)
-				}, 700);
-				console.log("Down");
-			} else if (nav1.hasClass("active")) {
-				pos = 0;
-				posLast = 0;
-			}
-
-
-
-			// else if ((pos != -1 && posLast != 0)) {
-//				$("html, body").animate({
-//					scrollTop: 0
-//				}, 700);
-//				console.log("Up");
-//			} else if (control < $(this).height()) {
-//
-//			}
-		};
+		}
 	});
 });
