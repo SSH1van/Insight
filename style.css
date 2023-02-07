@@ -276,6 +276,9 @@ h6 {
 	flex-direction: column;
 	align-items: center;
 	padding-top: 90px;
+
+	opacity: 0;
+	transform: translateY(300px);
 }
 
 .title {
@@ -442,6 +445,10 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top: 170px;
+
+	opacity: 0;
+	transform: translateY(200px);
 }
 
 .btn.pos {
@@ -459,6 +466,10 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top: 170px;
+
+	opacity: 0;
+	transform: translateY(200px);
 }
 
 .members_slider {
@@ -655,8 +666,14 @@ h6 {
 /* Services
 ======================*/
 
+.services {
+	opacity: 0;
+	transform: translateY(200px);
+	padding-top: 220px;
+}
+
 .services_items {
-	margin: 0 0 50px;
+	margin: 0 0 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -826,6 +843,35 @@ h6 {
 }
 
 
+/* Smooth show elements
+======================*/
+
+.element_show {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 1s, transform 1s;
+}
+
+/* Scrollbar
+======================*/
+
+::-webkit-scrollbar {
+	width: 1.3vh;
+
+}
+
+::-webkit-scrollbar-track {
+	background: #fff;
+	box-shadow: 0 0 1vh rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #193342;
+	border: .1vh solid #fff;
+	border-radius: 1vh;
+}
+
+
 /* Media
 ======================*/
 
@@ -884,7 +930,16 @@ h6 {
 		width: 700px;
 	}
 
+	/* Title */
+	.possibility {
+		padding-top: 80px;
+	}
+
 	/* Members */
+	.members {
+		padding-top: 80px;
+	}
+
 	.members_slider {
 		width: 614px;
 	}
@@ -925,6 +980,10 @@ h6 {
 	}
 
 	/* Services */
+	.services {
+		padding-top: 120px;
+	}
+
 	.services_text {
 		max-width: 320px;
 		font-size: 18px;
@@ -1158,7 +1217,16 @@ h6 {
 		font-size: 40px;
 	}
 
+	/* Possibility */
+	.possibility {
+		padding-top: 50px;
+	}
+
 	/* Members */
+	.members {
+		padding-top: 50px;
+	}
+
 	.members_slider {
 		width: 314px;
 	}
@@ -1218,7 +1286,11 @@ h6 {
 
 	/* Services */
 	.services {
-		padding-top: 40px;
+		padding-top: 90px;
+	}
+
+	.services_items {
+		margin-bottom: 50px;
 	}
 
 	.services_text {

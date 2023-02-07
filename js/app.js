@@ -149,12 +149,10 @@ $(function () {
 	/* Smooth scroll */
 	let elementId;
 	let elementOffset;
-	let mobileNan = true; /* Smooth scroll Intro on mobile device */
 
 	$("[data-scroll]").on("click", function (eventImportant) {
 		headerNav.removeClass("show");
 
-		mobileNan = eventImportant.isPrototypeOf(); /* Smooth scroll Intro on mobile device */
 		elementId = $(this).data("scroll");
 		elementOffset = $(elementId).offset().top;
 
@@ -181,12 +179,12 @@ $(function () {
 	});
 
 
-	/* Without hover for mobile */
+	/* Without hover for touch devices */
 	/* For block About */
-	let mobile = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+	let touchDevices = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
 
 	$("[data-nohover]").on("click", function () {
-		if (mobile) {
+		if (touchDevices) {
 			let elementThisId = $(this).data("nohover");
 			let elementThisOffset = $(elementThisId).select();
 
@@ -199,7 +197,7 @@ $(function () {
 	let navSelect;
 
 	$("[data-withouthover]").on("click", function (event) {
-		if (mobile) {
+		if (touchDevices) {
 			navId = $(this).data("withouthover");
 			navSelect = $(navId).select();
 
@@ -208,7 +206,7 @@ $(function () {
 	});
 
 	/* For arrow slider's */
-	if (mobile) {
+	if (touchDevices) {
 		let prev = $(".slick-prev");
 		let next = $(".slick-next");
 
@@ -230,35 +228,26 @@ $(function () {
 	});
 
 
-	/* Smooth scroll Intro on mobile device */
-	let bool1 = true;
-	let bool2 = false;
-
-	$(window).on('scroll', function () {
-		if (scrollPos < scrollPosLast) {
-			mobileNan = true;
-		}
-		if (mobile && mobileNan) {
-			if ($(this).scrollTop() == 0) {
-				bool1 = true;
-			} else if ($(this).scrollTop() < intro.height() + 50 && $(this).scrollTop() > intro.height()) {
-				bool1 = true;
-				bool2 = true;
-			} else if ($(this).scrollTop() <= intro.height() && bool1) {
-				if (!bool2) {
-					$("html, body").animate({
-						scrollTop: (intro.height())
-					}, 700);
-					bool1 = false;
-				}
-				if (bool2) {
-					$("html, body").animate({
-						scrollTop: (0)
-					}, 700);
-					bool2 = false;
-					bool1 = false;
-				}
+	/* Smooth show elements */
+	function onEntry(entry) {
+		entry.forEach(change => {
+			if (change.isIntersecting) {
+				change.target.classList.add('element_show');
 			}
-		}
-	});
+		});
+	}
+
+	let options = { threshold: [0.4] };
+	if ($(window).width() < 536) {
+		options = { threshold: [0.4] };
+	} else if ($(window).width() < 1250) {
+		options = { threshold: [0.2] };
+	}
+
+	let observer = new IntersectionObserver(onEntry, options);
+	let elements = $("[data-show]");
+
+	for (let elm of elements) {
+		observer.observe(elm);
+	}
 });
