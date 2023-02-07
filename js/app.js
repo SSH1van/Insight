@@ -162,23 +162,6 @@ $(function () {
 	});
 
 
-	/* Members https://kenwheeler.github.io/slick/ */
-	let slider = $("#membersSlider");
-
-	slider.slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		fade: false,
-		arrows: true,
-		dots: true,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		touchThreshold: 100,
-		speed: 270
-	});
-
-
 	/* Without hover for touch devices */
 	/* For block About */
 	let touchDevices = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
@@ -237,11 +220,17 @@ $(function () {
 		});
 	}
 
-	let options = { threshold: [0.4] };
+	let options = {
+		threshold: [0.3]
+	};
 	if ($(window).width() < 536) {
-		options = { threshold: [0.4] };
+		options = {
+			threshold: [0.4]
+		};
 	} else if ($(window).width() < 1250) {
-		options = { threshold: [0.2] };
+		options = {
+			threshold: [0.2]
+		};
 	}
 
 	let observer = new IntersectionObserver(onEntry, options);

@@ -275,7 +275,6 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 90px;
 
 	opacity: 0;
 	transform: translateY(300px);
@@ -464,204 +463,93 @@ h6 {
 
 .members {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	padding-top: 170px;
 
 	opacity: 0;
 	transform: translateY(200px);
 }
 
-.members_slider {
-	width: 814px;
-	position: relative;
+.member_inner {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 760px;
 }
 
 .member {
-	background-color: #eff2f7;
-	height: 952px;
-	border-radius: 5px;
-
+	height: 252px;
+	display: flex;
+	justify-content: center;
+	border: solid 1px #fff;
 	position: relative;
+	cursor: pointer;
+	transition: all .3s linear;
+	z-index: 1;
 }
 
 .member_photo {
 	position: relative;
-	height: 814px;
-	width: 814px;
-
+	height: 250px;
+	width: 250px;
 	overflow: hidden;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .photo {
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	z-index: 1;
 
 	transform: translate3d(-50%, -50%, 0);
+
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .member_description {
-	margin-left: 14px;
-	line-height: 2;
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, .6);
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	padding: 0 5px;
+
 	font-family: 'PT Serif', serif;
+
+	transition: all .3s linear;
+	opacity: 0;
 }
 
 .member_name {
-	margin-top: 5px;
 	font-size: 17px;
 	font-weight: 600;
 }
 
 .member_profession {
 	text-transform: lowercase;
+	font-size: 13px;
 }
 
-.member_more {
-	position: absolute;
-	top: 94%;
-	width: 100%;
-	z-index: 1;
-	padding: 18px 0;
-
-	font-size: 16px;
-	font-weight: 600;
-
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #244a61;
-
-	transition: all linear .3s;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.member_more:hover {
-	background-color: #244a61;
-	color: #fff;
-}
-
-.member_more.noHover:hover {
-	background-color: transparent;
-	color: #244a61;
-}
-
-.member_more:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 1px;
-
-	background-color: rgba(0, 0, 0, .2)
-}
-
-.slick-dots {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 0 0 20px;
-	list-style: none;
-
-	width: 100%;
-
-	position: absolute;
-	bottom: -55px;
-	right: 0;
-	z-index: 2;
-	color: #fff;
-}
-
-.slick-dots li {
-	margin: 0 8px;
-}
-
-.slick-dots button {
-	width: 15px;
-	height: 15px;
-
-	opacity: .5;
-	background: #fff;
-	border-radius: 50%;
-	border: 0;
-	padding: 0;
-	cursor: pointer;
-
-	color: transparent;
-}
-
-.slick-dots button:focus {
-	outline: 0;
-}
-
-.slick-dots .slick-active button {
+.member:hover .member_description {
 	opacity: 1;
-	transition: opacity .2s linear;
 }
 
-@property --myColor1 {
-	syntax: '<color>';
-	initial-value: transparent;
-	inherits: false;
+.member:hover {
+	transform: scale(1.2);
+	z-index: 5;
 }
 
-@property --myColor2 {
-	syntax: '<color>';
-	initial-value: transparent;
-	inherits: false;
-}
-
-.slick-arrow {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-
-	height: 814px;
-	font-size: 0;
-	color: transparent;
-	cursor: pointer;
-	border: none;
-	width: 20%;
-}
-
-.slick-prev {
-	left: 0;
-
-	background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-	transition: --myColor1 1s, --myColor2 1s;
-}
-
-.slick-prev:hover {
-	--myColor1: #fff;
-	--myColor2: transparent;
-}
-
-.slick-prev.noHover:hover {
-	--myColor1: transparent;
-	--myColor2: transparent;
-}
-
-.slick-next {
-	right: 0;
-
-	background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-	transition: --myColor1 1s, --myColor2 1s;
-}
-
-.slick-next:hover {
-	--myColor1: transparent;
-	--myColor2: #fff;
-}
-
-.slick-next.noHover:hover {
-	--myColor1: transparent;
-	--myColor2: transparent;
-}
 
 /* Services
 ======================*/
@@ -940,32 +828,6 @@ h6 {
 		padding-top: 80px;
 	}
 
-	.members_slider {
-		width: 614px;
-	}
-
-	.member {
-		height: 750px;
-	}
-
-	.member_photo {
-		height: 614px;
-		width: 100%;
-	}
-
-	.photo {
-		height: 100%;
-		width: 100%;
-	}
-
-	.member_more {
-		padding: 10px 0;
-	}
-
-	.slick-arrow {
-		height: 614px;
-	}
-
 	/* Button */
 	.btn {
 		width: 190px;
@@ -1074,43 +936,25 @@ h6 {
 	}
 
 	/* Members */
-	.members_slider {
-		width: 414px;
+	.member {
+		height: 172px;
 	}
 
-	.member {
-		height: 520px;
+	.member_inner {
+		width: 516px;
 	}
 
 	.member_photo {
-		height: 414px;
-		width: 100%;
-	}
-
-	.photo {
-		height: 100%;
-		width: 100%;
+		height: 170px;
+		width: 170px;
 	}
 
 	.member_name {
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	.member_profession {
-		font-size: 12px;
-	}
-
-	.member_more {
-		font-size: 12px;
-		padding: 7px 0;
-	}
-
-	.slick-dots li {
-		margin: 0 6px;
-	}
-
-	.slick-arrow {
-		height: 414px;
+		font-size: 9px;
 	}
 
 	/* Services */
@@ -1227,61 +1071,25 @@ h6 {
 		padding-top: 50px;
 	}
 
-	.members_slider {
-		width: 314px;
+	.member {
+		height: 132px;
 	}
 
-	.member {
-		height: 400px;
+	.member_inner {
+		width: 396px;
 	}
 
 	.member_photo {
-		height: 314px;
-		width: 100%;
-	}
-
-	.photo {
-		height: 100%;
-		width: 100%;
+		height: 130px;
+		width: 130px;
 	}
 
 	.member_name {
-		font-size: 13px;
+		font-size: 12px;
 	}
 
 	.member_profession {
-		font-size: 10px;
-	}
-
-	.member_more {
-		font-size: 12px;
-		padding: 3px 0;
-	}
-
-	.member_more:before {
-		top: -15%;
-	}
-
-	.slick-dots li {
-		margin: 0 5px;
-	}
-
-	.slick-dots button {
-		width: 12px;
-		height: 12px;
-	}
-
-	.slick-arrow {
-		height: 314px;
-	}
-
-	.slick-dots {
-		padding: 0 0 25px;
-	}
-
-	.slick-dots button {
-		width: 10px;
-		height: 10px;
+		font-size: 8px;
 	}
 
 	/* Services */
@@ -1402,56 +1210,26 @@ h6 {
 	}
 
 	/* Members */
-	.members {
-		margin: 0;
-	}
-
-	.members_slider {
-		width: 274px;
-	}
 
 	.member {
-		height: 340px;
+		height: 102px;
+	}
+
+	.member_inner {
+		width: 306px;
 	}
 
 	.member_photo {
-		height: 274px;
-		width: 100%;
-	}
-
-	.photo {
-		height: 100%;
-		width: 100%;
+		height: 100px;
+		width: 100px;
 	}
 
 	.member_name {
-		margin-top: 1px;
-		font-size: 11px;
-	}
-
-	.member_profession {
 		font-size: 9px;
 	}
 
-	.member_more {
-		font-size: 10px;
-		padding: 3px 0;
-	}
-
-	.member_more:before {
-		top: -5%;
-	}
-
-	.slick-dots li {
-		margin: 0 6px;
-	}
-
-	.slick-arrow {
-		height: 274px;
-	}
-
-	.members_slider {
-		margin-top: 10px;
+	.member_profession {
+		font-size: 7px;
 	}
 
 	/* Title */
@@ -1516,43 +1294,25 @@ h6 {
 	}
 
 	/* Members */
-	.members {
-		margin: 0;
-	}
-
-	.members_slider {
-		width: 214px;
-	}
-
 	.member {
-		height: 280px;
+		height: 82px;
+	}
+
+	.member_inner {
+		width: 246px;
 	}
 
 	.member_photo {
-		height: 214px;
-		width: 100%;
-	}
-
-	.photo {
-		height: 100%;
-		width: 100%;
+		height: 80px;
+		width: 80px;
 	}
 
 	.member_name {
-		margin-top: 5px;
-		font-size: 10px;
+		font-size: 7px;
 	}
 
 	.member_profession {
-		font-size: 8px;
-	}
-
-	.member_more {
-		font-size: 8px;
-	}
-
-	.slick-arrow {
-		height: 214px;
+		font-size: 6px;
 	}
 
 	/* Services */
